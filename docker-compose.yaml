@@ -6,6 +6,8 @@ services:
     restart: always
     networks: 
       - static-dev-network
+    ports:
+      - "127.0.0.1:17088:80"
     volumes:
       - ./data:/srv
       - ./nginx.conf:/etc/nginx/nginx.conf
