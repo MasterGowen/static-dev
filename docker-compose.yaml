@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  server:
+    image: nginx:alpine
+    restart: always
+    networks: 
+      - static-dev-network
+    volumes:
+      - ./data:/srv
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+networks:
+  static-dev-network:
